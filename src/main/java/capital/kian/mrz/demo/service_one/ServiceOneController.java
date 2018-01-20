@@ -1,26 +1,20 @@
-package capital.kian.mrz.demo.configclient;
+package capital.kian.mrz.demo.service_one;
 
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@SpringBootApplication
 @RestController
-public class ConfigclientApplication {
+public class ServiceOneController {
 
-    public static void main(String[] args) {
-        SpringApplication.run(ConfigclientApplication.class, args);
-    }
+//    @Value("${second}")
+//    private String service2; for showing could resolve config value from another config file
 
     @Value("${name}")
     private String instanceName;
 
     @Value("${branch}")
     private String branch;
-
 
     @GetMapping("/whoami")
     public String instanceName() {

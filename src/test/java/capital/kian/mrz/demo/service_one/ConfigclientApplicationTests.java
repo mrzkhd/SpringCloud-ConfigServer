@@ -1,4 +1,4 @@
-package capital.kian.mrz.demo.configclient;
+package capital.kian.mrz.demo.service_one;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
